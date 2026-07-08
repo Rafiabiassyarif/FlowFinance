@@ -1,0 +1,45 @@
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+
+const TOKEN_KEY = 'flowfinance_token';
+
+export function setAuthToken(token: string) {
+  sessionStorage.setItem(TOKEN_KEY, token);
+}
+
+export function getAuthToken(): string | null {
+  return sessionStorage.getItem(TOKEN_KEY);
+}
+
+export function clearAuthToken() {
+  sessionStorage.removeItem(TOKEN_KEY);
+}
+
+export async function apiRequest<T>(path: string, options: RequestInit = {}): Promise<T> {
+  const token = getAuthToken();
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    ...(options.headers as Record<string, string> || {}),
+  };
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const response = await fetch(`${API_BASE}${path}`, {
+    ...options,
+    headers,
+  });
+
+  // Auto-logout on 401 (expired/invalid token)
+  if (response.status === 401 && token) {
+    clearAuthToken();
+    sessionStorage.removeItem('flowfinance_user');
+    window.location.href = '/login';
+    throw new Error('Sesi Anda telah berakhir. Silakan login kembali.');
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(data.message || 'Request gagal.');
+  }
+  return data as T;
+}

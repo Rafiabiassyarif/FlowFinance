@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowFinance – Manajemen Keuangan Pribadi</title>
+    <meta name="description" content="FlowFinance adalah aplikasi manajemen keuangan pribadi yang membantu Anda melacak pemasukan, pengeluaran, anggaran, dan dompet dengan mudah." />
+    <meta name="theme-color" content="#020617" />
+    <!-- Prevent theme flash: apply saved theme before render -->
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        // Default to dark mode if no preference saved
+        if (saved === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

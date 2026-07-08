@@ -1,0 +1,8 @@
+{
+  "name": "FlowFinance",
+  "description": "A modern personal finance & expense tracker platform with a premium, clean, futuristic UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
