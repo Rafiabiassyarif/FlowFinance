@@ -22,14 +22,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Sync with user profile when it loads
   useEffect(() => {
-    if (profile?.language && profile.language !== localLang) {
+    if (profile?.email && profile?.language && profile.language !== localLang) {
       const validProfileLang = getValidLang(profile.language);
       if (validProfileLang !== localLang) {
         setLocalLang(validProfileLang);
         localStorage.setItem('language', validProfileLang);
       }
     }
-  }, [profile?.language]);
+  }, [profile?.language, profile?.email]);
 
   const setLanguage = (lang: LanguageKey) => {
     setLocalLang(lang);

@@ -5,6 +5,7 @@ import FeaturesSection from './FeaturesSection';
 import DashboardPreviewSection from './DashboardPreviewSection';
 import AdvancedFeaturesSection from './AdvancedFeaturesSection';
 import WhyChooseUsSection from './WhyChooseUsSection';
+import ContactSection from './ContactSection';
 import Footer from './Footer';
 import CustomCursor from './CustomCursor';
 import { useAuth } from '../../context/AuthContext';
@@ -63,6 +64,7 @@ export default function LandingPage() {
           <a href="#features" className="text-slate-300 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-brand-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">{t('nav.features')}</a>
           <a href="#preview" className="text-slate-300 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-brand-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">{t('nav.preview')}</a>
           <a href="#why-us" className="text-slate-300 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-brand-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">{t('nav.whyUs')}</a>
+          <a href="#contact" className="text-slate-300 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-brand-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">{t('footer.contact')}</a>
         </nav>
         
         <div className="flex items-center gap-4">
@@ -113,6 +115,7 @@ export default function LandingPage() {
         <DashboardPreviewSection />
         <AdvancedFeaturesSection />
         <WhyChooseUsSection />
+        <ContactSection />
       </main>
 
       <Footer />

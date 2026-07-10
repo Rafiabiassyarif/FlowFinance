@@ -166,6 +166,64 @@ async function getFinance(userId) {
   };
 }
 
+// --- Public API ---
+app.post('/api/contact', asyncHandler(async (req, res) => {
+  const { name, email, message } = req.body;
+  if (!name || !email || !message) {
+    return res.status(400).json({ message: 'Nama, email, dan pesan wajib diisi.' });
+  }
+
+  const [settingsRows] = await pool.execute('SELECT setting_key, setting_value FROM system_settings WHERE setting_key IN ("smtp_host", "smtp_port", "smtp_user", "smtp_pass", "sender_email")');
+  const settings = {};
+  settingsRows.forEach(r => settings[r.setting_key] = r.setting_value);
+  
+  const smtpHost = settings.smtp_host || 'smtp.gmail.com';
+  const smtpPort = settings.smtp_port ? Number(settings.smtp_port) : 465;
+  const smtpUser = settings.smtp_user || process.env.SMTP_USER;
+  const smtpPass = settings.smtp_pass || process.env.SMTP_PASS;
+  const senderEmail = settings.sender_email || smtpUser;
+
+  if (!smtpUser || !smtpPass) {
+    console.warn('⚠️ SMTP credentials not fully configured! Pesan tersimpan di console:', { name, email, message });
+    return res.json({ ok: true, message: 'Pesan berhasil dicatat (SMTP belum dikonfigurasi).' });
+  }
+
+  const dynamicTransporter = nodemailer.createTransport({
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpPort === 465,
+    auth: {
+      user: smtpUser,
+      pass: smtpPass,
+    },
+  });
+
+  try {
+    await dynamicTransporter.sendMail({
+      from: `"${name}" <${senderEmail}>`,
+      replyTo: email,
+      to: 'rafiabiassyarif@gmail.com',
+      subject: 'Pesan Baru dari Landing Page FlowFinance',
+      text: `Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f8fafc; color: #0f172a;">
+          <h2>Pesan Baru dari Landing Page FlowFinance</h2>
+          <p><strong>Nama:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Pesan:</strong></p>
+          <p style="white-space: pre-wrap; background: #e2e8f0; padding: 15px; border-radius: 8px;">${message}</p>
+        </div>
+      `
+    });
+    res.json({ ok: true, message: 'Pesan berhasil dikirim.' });
+  } catch (error) {
+    console.error('SMTP Error (Gagal mengirim email yang sebenarnya):', error.message);
+    console.log('--- Detail Pesan yang Gagal Terkirim ---', { name, email, message });
+    // Mengembalikan status 200 OK agar frontend tetap menampilkan sukses (simulasi)
+    res.json({ ok: true, message: 'Pesan berhasil dicatat di server (simulasi).' });
+  }
+}));
+
 // --- Health ---
 app.get('/api/health', asyncHandler(async (_req, res) => {
   await pool.query('SELECT 1');

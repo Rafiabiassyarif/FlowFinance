@@ -187,6 +187,27 @@ export const en = {
     strong: "Strong",
     google: "Google",
     apple: "Apple"
+  },
+  contact: {
+    tag: "Contact Us",
+    title1: "Let's ",
+    title2: "Talk",
+    subtitle: "Have questions or need assistance? Our team is here to help you anytime.",
+    info: "Contact Information",
+    emailDesc: "For general inquiries and support",
+    phoneDesc: "Mon - Fri, 09:00 - 17:00",
+    formTitle: "Send a Message",
+    nameLabel: "Full Name",
+    namePlaceholder: "Your Name",
+    emailLabel: "Email Address",
+    emailPlaceholder: "email@example.com",
+    subjectLabel: "Subject",
+    subjectPlaceholder: "How can we help you?",
+    messageLabel: "Message",
+    messagePlaceholder: "How can we help you?",
+    sending: "Sending...",
+    sent: "Message Sent!",
+    send: "Send Message"
   }
 };
 
@@ -379,6 +400,27 @@ export const id = {
     strong: "Kuat",
     google: "Google",
     apple: "Apple"
+  },
+  contact: {
+    tag: "Hubungi Kami",
+    title1: "Mari ",
+    title2: "Berdiskusi",
+    subtitle: "Punya pertanyaan atau butuh bantuan? Tim kami siap membantu Anda kapan saja.",
+    info: "Informasi Kontak",
+    emailDesc: "Untuk pertanyaan umum dan dukungan",
+    phoneDesc: "Senin - Jumat, 09:00 - 17:00",
+    formTitle: "Kirim Pesan",
+    nameLabel: "Nama Lengkap",
+    namePlaceholder: "Nama Anda",
+    emailLabel: "Alamat Email",
+    emailPlaceholder: "email@contoh.com",
+    subjectLabel: "Subjek",
+    subjectPlaceholder: "Ada yang bisa kami bantu?",
+    messageLabel: "Pesan",
+    messagePlaceholder: "Bagaimana kami bisa membantu Anda?",
+    sending: "Mengirim...",
+    sent: "Pesan Terkirim!",
+    send: "Kirim Pesan"
   }
 };
 
