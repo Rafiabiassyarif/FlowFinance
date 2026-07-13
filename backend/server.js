@@ -15,7 +15,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const port = Number(process.env.PORT || 3001);
+const port = Number(process.env.PORT || process.env.SERVER_PORT || 3001);
 
 // In-memory store for OTP codes (For demo/local use only. Real app would use Redis or DB table)
 const resetCodes = new Map();
@@ -992,6 +992,6 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ message: err.message || 'Terjadi kesalahan server.' });
 });
 
-app.listen(port, () => {
-  console.log(`✅ FlowFinance API running on http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`✅ FlowFinance API running on port ${port}`);
 });
