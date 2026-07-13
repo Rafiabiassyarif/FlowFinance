@@ -985,12 +985,6 @@ app.get('/api/admin/backup', asyncHandler((req, res) => {
   });
 }));
 
-// Serve built frontend
-app.use(express.static(path.join(__dirname, 'dist')));
-app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
 // Global error handler
 app.use((err, _req, res, _next) => {
   console.error('[FlowFinance Error]', err.message || err);

@@ -3,8 +3,8 @@ import { spawn } from 'child_process';
 const isWindows = process.platform === 'win32';
 
 const processes = [
-  spawn('node', ['server.js'], { stdio: 'inherit', shell: isWindows }),
-  spawn('npx', ['vite', '--port=3000', '--host=0.0.0.0'], { stdio: 'inherit', shell: isWindows }),
+  spawn('npm', ['run', 'dev'], { cwd: './backend', stdio: 'inherit', shell: isWindows }),
+  spawn('npm', ['run', 'dev'], { cwd: './frontend', stdio: 'inherit', shell: isWindows }),
 ];
 
 const shutdown = () => {
