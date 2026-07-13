@@ -986,12 +986,22 @@ app.get('/api/admin/backup', asyncHandler((req, res) => {
 }));
 
 // Global error handler
-app.use((err, _req, res, _next) => {
+app.use((err, req, res, next) => {
   console.error('[FlowFinance Error]', err.message || err);
   if (res.headersSent) return;
   res.status(500).json({ message: err.message || 'Terjadi kesalahan server.' });
 });
 
+// --- Serve React Frontend ---
+// This serves the built React app from the frontend/dist folder
+const frontendDistPath = path.join(__dirname, '../frontend/dist');
+app.use(express.static(frontendDistPath));
+
+// Fallback for React Router (SPA)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendDistPath, 'index.html'));
+});
+
 app.listen(port, '0.0.0.0', () => {
-  console.log(`✅ FlowFinance API running on port ${port}`);
+  console.log(`✅ FlowFinance API & Frontend running on port ${port}`);
 });
