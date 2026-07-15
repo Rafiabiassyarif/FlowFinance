@@ -5,26 +5,15 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
-    },
+    },  
     build: {
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('recharts') || id.includes('d3')) return 'charts';
-              if (id.includes('/node_modules/lucide-react/') || id.includes('/node_modules/framer-motion/')) return 'ui-vendor';
-              if (id.includes('/node_modules/react/') || id.includes('/node_modules/react-dom/') || id.includes('/node_modules/react-router')) return 'react-vendor';
-              return 'vendor';
-            }
-          }
-        }
-      }
+      chunkSizeWarningLimit: 1000
     },
     server: {
       proxy: {

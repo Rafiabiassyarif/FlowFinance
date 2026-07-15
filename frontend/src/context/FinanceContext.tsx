@@ -11,6 +11,8 @@ export interface Profile {
   phone?: string;
   avatar?: string | null;
   twoFactorEnabled?: boolean;
+  notifEmail?: boolean;
+  notifPush?: boolean;
 }
 
 interface FinancePayload {

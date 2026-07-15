@@ -41,7 +41,8 @@ const pool = mysql.createPool({
 
 app.use(express.json());
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors({ origin: process.env.APP_URL || 'http://localhost:3000', credentials: true }));
+const allowedOrigins = process.env.APP_URL ? process.env.APP_URL.split(',') : ['http://localhost:3000'];
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 const globalLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 200, message: { message: 'Terlalu banyak permintaan.' } });
 const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 10, message: { message: 'Terlalu banyak percobaan, coba lagi dalam 15 menit.' } });
