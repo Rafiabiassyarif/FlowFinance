@@ -24,7 +24,7 @@ export default function HeroSection() {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
         </span>
-        <span className="text-white font-semibold">FlowFinance 2.0</span> {t('hero.live').replace('FlowFinance 2.0', '')}
+        <span className="text-white font-semibold">Monevra 2.0</span> {t('hero.live').replace('Monevra 2.0', '')}
         <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-brand-400 transition-colors" />
       </motion.div>
 

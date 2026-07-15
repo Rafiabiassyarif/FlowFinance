@@ -55,9 +55,9 @@ export default function LandingPage() {
         <div className="flex items-center group cursor-default">
           <div className="relative -mr-3">
             <div className="absolute inset-1 bg-brand-400/20 blur-lg rounded-full group-hover:bg-brand-400/40 transition-colors duration-500"></div>
-            <img src="/Logo12-removebg-preview.png" alt="Logo" className="h-8 md:h-10 w-auto object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.15)] group-hover:scale-105 transition-transform duration-500" />
+            <img src="/logo-monevra.png" alt="Logo" className="h-10 md:h-12 w-auto object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.15)] group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <span className="font-display font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-accent-400 ml-3">FlowFinance</span>
+          <span className="font-display font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-accent-400 ml-3">Monevra</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-10 text-sm font-medium">

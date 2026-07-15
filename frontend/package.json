@@ -1,5 +1,5 @@
 {
-  "name": "flowfinance-frontend",
+  "name": "monevra-frontend",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -15,7 +15,7 @@
     "clsx": "^2.1.1",
     "exceljs": "^4.4.0",
     "file-saver": "^2.0.5",
-    "flowfinance-root": "file:..",
+    "monevra-root": "file:..",
     "lucide-react": "^0.546.0",
     "motion": "^12.23.24",
     "react": "^19.0.1",

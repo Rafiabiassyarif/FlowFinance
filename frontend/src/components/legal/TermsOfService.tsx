@@ -23,7 +23,7 @@ export default function TermsOfService() {
           <div className="space-y-6 text-slate-300 leading-relaxed">
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">1. Penerimaan Syarat</h2>
-              <p>Dengan mengakses dan menggunakan FlowFinance, Anda menyetujui untuk terikat oleh Syarat & Ketentuan Layanan ini. Jika Anda tidak setuju dengan bagian mana pun dari syarat ini, Anda tidak diperkenankan menggunakan layanan kami.</p>
+              <p>Dengan mengakses dan menggunakan Monevra, Anda menyetujui untuk terikat oleh Syarat & Ketentuan Layanan ini. Jika Anda tidak setuju dengan bagian mana pun dari syarat ini, Anda tidak diperkenankan menggunakan layanan kami.</p>
             </section>
             
             <section>
@@ -33,12 +33,12 @@ export default function TermsOfService() {
             
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">3. Penggunaan Layanan</h2>
-              <p>Anda setuju untuk tidak menyalahgunakan layanan FlowFinance. Anda dilarang menggunakan platform ini untuk tujuan ilegal, pencucian uang, penipuan, atau tindakan yang melanggar hukum dan peraturan yang berlaku di wilayah yurisdiksi Anda.</p>
+              <p>Anda setuju untuk tidak menyalahgunakan layanan Monevra. Anda dilarang menggunakan platform ini untuk tujuan ilegal, pencucian uang, penipuan, atau tindakan yang melanggar hukum dan peraturan yang berlaku di wilayah yurisdiksi Anda.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">4. Keamanan Data Finansial</h2>
-              <p>FlowFinance menyediakan alat pencatatan dan pengelolaan keuangan. Walaupun kami menggunakan enkripsi standar industri, kami tidak bertanggung jawab atas kerugian finansial yang diakibatkan oleh kelalaian Anda dalam menjaga keamanan perangkat atau membagikan akses Anda kepada pihak ketiga.</p>
+              <p>Monevra menyediakan alat pencatatan dan pengelolaan keuangan. Walaupun kami menggunakan enkripsi standar industri, kami tidak bertanggung jawab atas kerugian finansial yang diakibatkan oleh kelalaian Anda dalam menjaga keamanan perangkat atau membagikan akses Anda kepada pihak ketiga.</p>
             </section>
             
             <section>
@@ -48,7 +48,7 @@ export default function TermsOfService() {
             
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">6. Batasan Tanggung Jawab</h2>
-              <p>FlowFinance tidak memberikan jaminan keuangan atau nasihat investasi. Semua keputusan keuangan yang Anda buat dengan menggunakan perangkat lunak kami adalah risiko Anda sendiri.</p>
+              <p>Monevra tidak memberikan jaminan keuangan atau nasihat investasi. Semua keputusan keuangan yang Anda buat dengan menggunakan perangkat lunak kami adalah risiko Anda sendiri.</p>
             </section>
           </div>
         </motion.div>

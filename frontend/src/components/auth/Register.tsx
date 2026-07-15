@@ -230,7 +230,7 @@ export default function Register() {
               className="mt-1 w-4 h-4 rounded border-white/20 bg-surface-dark/40 text-brand-500 focus:ring-brand-500/30 cursor-pointer accent-brand-500"
             />
             <label htmlFor="terms" className="text-sm text-slate-400 cursor-pointer leading-relaxed">
-              Saya setuju dengan <Link to="/terms" target="_blank" className="text-brand-400 hover:text-brand-300 font-medium">Syarat & Ketentuan</Link> dan <Link to="/privacy" target="_blank" className="text-brand-400 hover:text-brand-300 font-medium">Kebijakan Privasi</Link> FlowFinance
+              Saya setuju dengan <Link to="/terms" target="_blank" className="text-brand-400 hover:text-brand-300 font-medium">Syarat & Ketentuan</Link> dan <Link to="/privacy" target="_blank" className="text-brand-400 hover:text-brand-300 font-medium">Kebijakan Privasi</Link> Monevra
             </label>
           </motion.div>
 

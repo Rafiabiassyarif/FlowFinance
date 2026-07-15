@@ -1,5 +1,5 @@
 {
-  "name": "flowfinance-root",
+  "name": "monevra-root",
   "private": true,
   "scripts": {
     "install": "npm install --prefix backend",

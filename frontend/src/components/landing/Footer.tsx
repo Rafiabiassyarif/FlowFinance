@@ -46,9 +46,9 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
               <div className="relative -mr-3">
-                <img src="/Logo12-removebg-preview.png" alt="Logo" className="h-10 md:h-12 w-auto object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]" />
+                <img src="/logo-monevra.png" alt="Logo" className="h-12 md:h-14 w-auto object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]" />
               </div>
-              <span className="font-display font-bold text-2xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-accent-500 dark:from-brand-400 dark:to-accent-400 ml-3">FlowFinance</span>
+              <span className="font-display font-bold text-2xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-accent-500 dark:from-brand-400 dark:to-accent-400 ml-3">Monevra</span>
             </div>
             <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-sm leading-relaxed text-base">
               {t('footer.desc')}
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-200 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} FlowFinance. {t('footer.rights')}</p>
+          <p>© {new Date().getFullYear()} Monevra. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

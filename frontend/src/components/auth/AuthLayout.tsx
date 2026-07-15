@@ -25,10 +25,10 @@ export default function AuthLayout({ children, title, subtitle }: { children: Re
               <div className="flex items-center gap-2.5 px-5 py-2.5 bg-surface-dark/40 backdrop-blur-md rounded-full border border-white/10 shadow-[0_0_30px_rgba(6,182,212,0.15)] group-hover:bg-surface-dark/60 group-hover:border-white/20 transition-all duration-300">
                 <div className="relative flex items-center justify-center">
                   <div className="absolute inset-1 bg-brand-400/20 blur-md rounded-full group-hover:bg-brand-400/40 transition-colors duration-500"></div>
-                  <img src="/Logo12-removebg-preview.png" alt="Logo" className="h-8 w-auto object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300" />
+                  <img src="/logo-monevra.png" alt="Logo" className="h-10 w-auto object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <span className="font-display font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-accent-400">
-                  FlowFinance
+                  Monevra
                 </span>
               </div>
             </Link>

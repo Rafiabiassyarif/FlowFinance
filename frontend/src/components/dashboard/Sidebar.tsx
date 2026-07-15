@@ -36,8 +36,8 @@ export default function Sidebar({ open, setOpen, activeTab, setActiveTab, onLogo
     )}>
       <div className="h-20 flex items-center justify-between px-6 border-b border-border-dark relative bg-surface-dark/20">
         <div className="flex items-center gap-3">
-          <img src="/Logo12-removebg-preview.png" alt="FlowFinance" className="w-8 h-8 drop-shadow-[0_0_12px_rgba(255,255,255,0.15)] object-contain" />
-          <span className="font-display font-bold text-xl tracking-tight text-slate-200">FlowFinance</span>
+          <img src="/logo-monevra.png" alt="Monevra" className="w-10 h-10 drop-shadow-[0_0_12px_rgba(255,255,255,0.15)] object-contain" />
+          <span className="font-display font-bold text-xl tracking-tight text-slate-200">Monevra</span>
         </div>
         <button className="lg:hidden text-slate-400 hover:text-white transition-colors" onClick={() => setOpen(false)}>
           <X size={20} />

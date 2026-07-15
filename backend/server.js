@@ -34,7 +34,7 @@ const pool = mysql.createPool({
   port: Number(process.env.DB_PORT || 3306),
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'flowfinance',
+  database: process.env.DB_NAME || 'monevra',
   waitForConnections: true,
   connectionLimit: 10,
 });
@@ -203,11 +203,11 @@ app.post('/api/contact', asyncHandler(async (req, res) => {
       from: `"${name}" <${senderEmail}>`,
       replyTo: email,
       to: 'rafiabiassyarif@gmail.com',
-      subject: 'Pesan Baru dari Landing Page FlowFinance',
+      subject: 'Pesan Baru dari Landing Page Monevra',
       text: `Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f8fafc; color: #0f172a;">
-          <h2>Pesan Baru dari Landing Page FlowFinance</h2>
+          <h2>Pesan Baru dari Landing Page Monevra</h2>
           <p><strong>Nama:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Pesan:</strong></p>
@@ -470,21 +470,21 @@ app.post('/api/auth/reset-password', asyncHandler(async (req, res) => {
       });
 
       await dynamicTransporter.sendMail({
-        from: `"FlowFinance Security" <${senderEmail}>`,
+        from: `"Monevra Security" <${senderEmail}>`,
         to: email,
         subject: 'Kode Verifikasi Reset Password',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #0f172a; color: #f8fafc; border-radius: 12px;">
-            <h2 style="color: #3b82f6; text-align: center;">Reset Password FlowFinance</h2>
+            <h2 style="color: #3b82f6; text-align: center;">Reset Password Monevra</h2>
             <p>Halo,</p>
-            <p>Kami menerima permintaan untuk mereset kata sandi akun FlowFinance Anda.</p>
+            <p>Kami menerima permintaan untuk mereset kata sandi akun Monevra Anda.</p>
             <p>Berikut adalah kode verifikasi OTP Anda (berlaku selama 5 menit):</p>
             <div style="background-color: #1e293b; padding: 15px; text-align: center; border-radius: 8px; margin: 20px 0;">
               <strong style="font-size: 24px; letter-spacing: 5px; color: #60a5fa;">${code}</strong>
             </div>
             <p>Jika Anda tidak pernah meminta reset password, abaikan email ini dan akun Anda akan tetap aman.</p>
             <hr style="border-color: #334155; margin: 30px 0;">
-            <p style="font-size: 12px; color: #94a3b8; text-align: center;">© 2026 FlowFinance. All rights reserved.</p>
+            <p style="font-size: 12px; color: #94a3b8; text-align: center;">© 2026 Monevra. All rights reserved.</p>
           </div>
         `,
       });
@@ -959,14 +959,14 @@ app.get('/api/admin/backup', asyncHandler((req, res) => {
   const dbPort = process.env.DB_PORT || 3306;
   const dbUser = process.env.DB_USER || 'root';
   const dbPass = process.env.DB_PASSWORD || '';
-  const dbName = process.env.DB_NAME || 'flowfinance';
+  const dbName = process.env.DB_NAME || 'monevra';
   
   const args = ['-h', dbHost, '-P', String(dbPort), '-u', dbUser];
   if (dbPass) args.push(`-p${dbPass}`);
   args.push(dbName);
   
   const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  res.setHeader('Content-Disposition', `attachment; filename="flowfinance_backup_${dateStr}.sql"`);
+  res.setHeader('Content-Disposition', `attachment; filename="monevra_backup_${dateStr}.sql"`);
   res.setHeader('Content-Type', 'application/sql');
   
   const dump = spawn('mysqldump', args);
@@ -987,7 +987,7 @@ app.get('/api/admin/backup', asyncHandler((req, res) => {
 
 // Global error handler
 app.use((err, req, res, next) => {
-  console.error('[FlowFinance Error]', err.message || err);
+  console.error('[Monevra Error]', err.message || err);
   if (res.headersSent) return;
   res.status(500).json({ message: err.message || 'Terjadi kesalahan server.' });
 });
@@ -1003,5 +1003,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`✅ FlowFinance API & Frontend running on port ${port}`);
+  console.log(`✅ Monevra API & Frontend running on port ${port}`);
 });

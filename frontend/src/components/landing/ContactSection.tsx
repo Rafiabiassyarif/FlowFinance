@@ -57,12 +57,12 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+            <div className="bg-surface-dark p-8 rounded-2xl border border-border-dark backdrop-blur-sm shadow-xl">
               <h3 className="text-xl font-bold mb-6 text-white">{t('contact.info')}</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-brand-500/20 flex items-center justify-center shrink-0">
-                    <Mail className="text-brand-400 w-5 h-5" />
+                    <Mail className="text-brand-500 w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Email Us</h4>
@@ -72,7 +72,7 @@ export default function ContactSection() {
                 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-brand-500/20 flex items-center justify-center shrink-0">
-                    <Phone className="text-brand-400 w-5 h-5" />
+                    <Phone className="text-brand-500 w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Call Us</h4>
@@ -84,7 +84,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+          <div className="bg-surface-dark p-8 rounded-2xl border border-border-dark backdrop-blur-sm shadow-xl">
             <h3 className="text-xl font-bold mb-6 text-white">{t('contact.formTitle')}</h3>
             
             {status === 'success' ? (
@@ -110,7 +110,7 @@ export default function ContactSection() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 bg-slate-900/50 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white"
+                      className="w-full px-4 py-2.5 bg-surface-hover border border-border-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white placeholder:text-slate-400"
                       placeholder={t('contact.namePlaceholder')}
                     />
                   </div>
@@ -123,7 +123,7 @@ export default function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 bg-slate-900/50 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white"
+                      className="w-full px-4 py-2.5 bg-surface-hover border border-border-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white placeholder:text-slate-400"
                       placeholder={t('contact.emailPlaceholder')}
                     />
                   </div>
@@ -138,7 +138,7 @@ export default function ContactSection() {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-slate-900/50 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white"
+                    className="w-full px-4 py-2.5 bg-surface-hover border border-border-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white placeholder:text-slate-400"
                     placeholder={t('contact.subjectPlaceholder')}
                   />
                 </div>
@@ -152,7 +152,7 @@ export default function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 bg-slate-900/50 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white resize-none"
+                    className="w-full px-4 py-2.5 bg-surface-hover border border-border-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-white placeholder:text-slate-400 resize-none"
                     placeholder={t('contact.messagePlaceholder')}
                   ></textarea>
                 </div>

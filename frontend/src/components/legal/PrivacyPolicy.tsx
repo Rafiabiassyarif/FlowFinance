@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
             
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">2. Bagaimana Kami Menggunakan Informasi Anda</h2>
-              <p>Kami menggunakan informasi yang kami kumpulkan untuk mengoperasikan, memelihara, dan meningkatkan aplikasi FlowFinance. Data transaksi Anda diproses secara eksklusif untuk menampilkan analitik, anggaran, dan metrik keuangan di dasbor Anda sendiri. Kami juga menggunakan email Anda untuk mengirim kode OTP dan pemberitahuan keamanan akun.</p>
+              <p>Kami menggunakan informasi yang kami kumpulkan untuk mengoperasikan, memelihara, dan meningkatkan aplikasi Monevra. Data transaksi Anda diproses secara eksklusif untuk menampilkan analitik, anggaran, dan metrik keuangan di dasbor Anda sendiri. Kami juga menggunakan email Anda untuk mengirim kode OTP dan pemberitahuan keamanan akun.</p>
             </section>
             
             <section>
@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
             
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">4. Berbagi Informasi</h2>
-              <p>FlowFinance TIDAK PERNAH menjual, menyewakan, atau menukar data pribadi dan finansial Anda kepada pihak ketiga mana pun. Informasi hanya akan dibagikan jika diwajibkan secara hukum atau dengan persetujuan eksplisit Anda.</p>
+              <p>Monevra TIDAK PERNAH menjual, menyewakan, atau menukar data pribadi dan finansial Anda kepada pihak ketiga mana pun. Informasi hanya akan dibagikan jika diwajibkan secara hukum atau dengan persetujuan eksplisit Anda.</p>
             </section>
             
             <section>

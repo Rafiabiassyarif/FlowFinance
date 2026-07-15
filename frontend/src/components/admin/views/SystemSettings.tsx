@@ -79,7 +79,7 @@ export default function SystemSettings() {
           </div>
           <div>
             <h2 className="text-2xl font-display font-bold text-slate-200">Pengaturan Sistem</h2>
-            <p className="text-slate-400 text-sm">Konfigurasi global platform FlowFinance.</p>
+            <p className="text-slate-400 text-sm">Konfigurasi global platform Monevra.</p>
           </div>
         </div>
         <button onClick={handleSave} disabled={saving} className="hidden md:flex btn-admin-premium disabled:opacity-50">
@@ -177,7 +177,7 @@ export default function SystemSettings() {
                 <label className="block text-xs font-medium text-slate-400 mb-1">Sender Email</label>
                 <input 
                   type="text" 
-                  placeholder="noreply@flowfinance.com"
+                  placeholder="noreply@monevra.com"
                   value={settings['sender_email'] || ''} 
                   onChange={(e) => updateSetting('sender_email', e.target.value)}
                   className="admin-input" 

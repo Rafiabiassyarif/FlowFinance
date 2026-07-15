@@ -1,6 +1,6 @@
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
-const TOKEN_KEY = 'flowfinance_token';
+const TOKEN_KEY = 'monevra_token';
 
 export function setAuthToken(token: string) {
   sessionStorage.setItem(TOKEN_KEY, token);
@@ -32,7 +32,7 @@ export async function apiRequest<T>(path: string, options: RequestInit = {}): Pr
   // Auto-logout on 401 (expired/invalid token)
   if (response.status === 401 && token) {
     clearAuthToken();
-    sessionStorage.removeItem('flowfinance_user');
+    sessionStorage.removeItem('monevra_user');
     window.location.href = '/login';
     throw new Error('Sesi Anda telah berakhir. Silakan login kembali.');
   }

@@ -25,7 +25,7 @@ interface AuthContextType {
   confirmPasswordReset: (email: string, newPassword: string, code: string) => Promise<void>;
 }
 
-const STORAGE_KEY = 'flowfinance_user';
+const STORAGE_KEY = 'monevra_user';
 
 const AuthContext = createContext<AuthContextType>({
   user: null,

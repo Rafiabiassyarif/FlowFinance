@@ -24,7 +24,7 @@ export const en = {
     card5Desc: 'Instantly find specific transactions from years ago. Filter by amount, date, category, or custom tags with zero lag.'
   },
   hero: {
-    live: "FlowFinance 2.0 is now live",
+    live: "Monevra 2.0 is now live",
     title1: "Financial Clarity,",
     title2: "Perfectly Designed.",
     subtitle: "Experience the future of personal wealth management. Powerful analytics, gorgeous interfaces, and unmatched precision in every transaction.",
@@ -107,7 +107,7 @@ export const en = {
   footer: {
     ready: "Ready to take",
     control: "control?",
-    subtitle: "Start managing your finances with clarity and precision using FlowFinance.",
+    subtitle: "Start managing your finances with clarity and precision using Monevra.",
     cta: "Get Started Now",
     desc: "The modern standard for personal wealth tracking. Experience precision, privacy, and beautiful design in one powerful platform.",
     product: "PRODUCT",
@@ -157,7 +157,7 @@ export const en = {
   },
   auth: {
     loginTitle: "Sign in to your account",
-    loginSubtitle: "Welcome back to FlowFinance",
+    loginSubtitle: "Welcome back to Monevra",
     emailLabel: "Email Address",
     emailPlaceholder: "you@example.com",
     passwordLabel: "Password",
@@ -168,7 +168,7 @@ export const en = {
     noAccount: "Don't have an account?",
     signUpNow: "Sign up now",
     registerTitle: "Create your account",
-    registerSubtitle: "Join FlowFinance today",
+    registerSubtitle: "Join Monevra today",
     nameLabel: "Full Name",
     namePlaceholder: "John Doe",
     creatingAccount: "Creating account...",
@@ -237,7 +237,7 @@ export const id = {
     card5Desc: 'Temukan transaksi tertentu dari bertahun-tahun lalu secara instan. Filter berdasarkan jumlah, tanggal, atau tag tanpa lag.'
   },
   hero: {
-    live: "FlowFinance 2.0 kini telah rilis",
+    live: "Monevra 2.0 kini telah rilis",
     title1: "Kejelasan Finansial,",
     title2: "Dirancang Sempurna.",
     subtitle: "Rasakan masa depan manajemen kekayaan pribadi. Analitik kuat, antarmuka menawan, dan presisi tak tertandingi di setiap transaksi.",
@@ -320,7 +320,7 @@ export const id = {
   footer: {
     ready: "Siap mengambil",
     control: "kendali?",
-    subtitle: "Mulai kelola keuangan Anda dengan kejelasan dan presisi menggunakan FlowFinance.",
+    subtitle: "Mulai kelola keuangan Anda dengan kejelasan dan presisi menggunakan Monevra.",
     cta: "Mulai Sekarang",
     desc: "Standar modern untuk pelacakan kekayaan pribadi. Rasakan presisi, privasi, dan desain yang indah dalam satu platform yang kuat.",
     product: "PRODUK",
@@ -370,7 +370,7 @@ export const id = {
   },
   auth: {
     loginTitle: "Masuk ke akun Anda",
-    loginSubtitle: "Selamat datang kembali di FlowFinance",
+    loginSubtitle: "Selamat datang kembali di Monevra",
     emailLabel: "Alamat Email",
     emailPlaceholder: "anda@contoh.com",
     passwordLabel: "Kata Sandi",
@@ -381,7 +381,7 @@ export const id = {
     noAccount: "Belum punya akun?",
     signUpNow: "Daftar sekarang",
     registerTitle: "Buat akun Anda",
-    registerSubtitle: "Bergabunglah dengan FlowFinance",
+    registerSubtitle: "Bergabunglah dengan Monevra",
     nameLabel: "Nama Lengkap",
     namePlaceholder: "Budi Santoso",
     creatingAccount: "Membuat akun...",

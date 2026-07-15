@@ -1,12 +1,12 @@
-# FlowFinance
+# Monevra
 
-FlowFinance sekarang berjalan dengan React, Express API lokal, dan MySQL Laragon.
+Monevra sekarang berjalan dengan React, Express API lokal, dan MySQL Laragon.
 
 ## Prasyarat
 
 - Node.js
 - Laragon/MySQL aktif
-- Database MySQL bernama `flowfinance`
+- Database MySQL bernama `monevra`
 
 ## Setup Database
 
@@ -16,10 +16,10 @@ Import schema dan data awal:
 mysql -u root < database/flowfinance.sql
 ```
 
-Atau kalau database `flowfinance` sudah ada:
+Atau kalau database `monevra` sudah ada:
 
 ```bash
-mysql -u root flowfinance < database/flowfinance.sql
+mysql -u root monevra < database/flowfinance.sql
 ```
 
 ## Jalankan Development
@@ -44,4 +44,4 @@ App production akan diserve oleh Express di `http://localhost:3001`.
 ## Akun Awal
 
 - Admin: `rafiabiassyarif@gmail.com` / `admin123`
-- User: `user.demo@flowfinance.com` / `user123`
+- User: `user.demo@monevra.com` / `user123`

@@ -15,7 +15,7 @@ export default function ReportsView() {
     }
 
     const workbook = new ExcelJS.Workbook();
-    workbook.creator = 'FlowFinance';
+    workbook.creator = 'Monevra';
     workbook.created = new Date();
     
     const sheet = workbook.addWorksheet('Data Transaksi Mentah');
@@ -75,7 +75,7 @@ export default function ReportsView() {
     // Generate File
     const buffer = await workbook.xlsx.writeBuffer();
     const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-    saveAs(blob, `FlowFinance_Transaksi_${new Date().toISOString().split('T')[0]}.xlsx`);
+    saveAs(blob, `Monevra_Transaksi_${new Date().toISOString().split('T')[0]}.xlsx`);
   };
 
   const handleExportPDF = () => {
@@ -189,7 +189,7 @@ export default function ReportsView() {
           <div className="text-right flex flex-col items-end">
             <div className="w-28 h-28 mb-4 relative group">
                <div className="absolute inset-0 bg-brand-400/10 blur-xl rounded-full"></div>
-               <img src="/Logo12-removebg-preview.png" alt="FlowFinance Logo" className="w-full h-full object-contain filter drop-shadow-xl relative z-10" />
+               <img src="/logo-monevra.png" alt="Monevra Logo" className="w-full h-full object-contain filter drop-shadow-xl relative z-10" />
             </div>
             <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-2">KEPADA</p>
             <p className="font-bold text-slate-900 text-sm uppercase tracking-[0.15em] mb-1">{profile.name}</p>
